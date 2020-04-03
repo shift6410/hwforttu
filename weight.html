@@ -31,11 +31,11 @@
 					<form>
 						<input placeholder="輸入數值..." type="number" name="input1" id="input1" onkeyup="cal(input1,unit1,input2,unit2);">
 						<select id="unit1" name="unit1" title="kilometer" onchange="this.title=this.options[this.selectedIndex].title;cal(input1,unit1,input2,unit2);">
-					      <option value="t" title="metric ton">t</option>
+					          <option value="t" title="metric ton">t</option>
 						　<option value="kg" title="kilogram">kg</option>
-						　<option value="g" title="gram">g</option>
 						  <option value="twkg" title="TWKG">臺斤</option>
 						  <option value="twtwo" title="TWTWO">臺兩</option>
+					          <option value="g" title="gram">g</option>
 						</select>
 					</form>
 					<p>到：</p>
@@ -44,9 +44,9 @@
 						<select id="unit2" name="unit2" title="kilometer" onchange="this.title=this.options[this.selectedIndex].title;cal(input1,unit1,input2,unit2);">
 						  <option value="t" title="metric ton">t</option>
 						　<option value="kg" title="kilogram">kg</option>
-						　<option value="g" title="gram">g</option>
 						  <option value="twkg" title="TWKG">臺斤</option>
 						  <option value="twtwo" title="TWTWO">臺兩</option>
+						<option value="g" title="gram">g</option>
 					</form>
 				</article>
 			</section>
@@ -61,7 +61,7 @@
 		<script>
 			function cal(input, unit, output, unit_out)
 			{
-				var ratio = [1000000,1000,1,600,37.5];
+				var ratio = [1000000,1000,600,37.5,1];
 				output.value = Math.round(1000000 * input.value * ratio[unit.selectedIndex] / ratio[unit_out.selectedIndex])/1000000;
 			}
 		</script>
