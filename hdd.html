@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>語意網作業2</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+	
+		<header class = "banner">
+			<h1>單位換算</h1>
+		</header>
+		
+		<nav>
+			<ul>
+				<li><a href = "index.html">首頁</a></li>
+				<li><a href = "length.html">長度換算</a></li>
+				<li><a href = "weight.html">重量換算</a></li>
+				<li><a href = "hdd.html">硬碟容量換算</a></li>
+				<li><a href = "webspeed.html">網速換算</a></li>
+				<li><a href = "time.html">時間換算</a></li>
+				<li><a href = "index.html">首頁</a></li>
+			</ul>
+		</nav>
+		
+		<main>
+			<section>
+				<h2>硬碟容量換算</h2>
+				<article>
+					<p>從：</p>
+					<form>
+						<input placeholder="輸入數值..." type="number" name="input1" id="input1" onkeyup="cal(input1,unit1,input2,unit2);">
+						<select id="unit1" name="unit1" title="kilometer" onchange="this.title=this.options[this.selectedIndex].title;cal(input1,unit1,input2,unit2);">
+						　<option value="TB" title="TB">TB</option>
+						　<option value="G" title="G">G</option>
+						　<option value="MB" title="MB">MB</option>
+						　<option value="KB" title="KB">KB</option>
+						  <option value="B" title="BYTE">B</option>
+						  <option value="bit" title="bit">bit</option>
+						</select>
+					</form>
+					<p>到：</p>
+					<form>
+						<input placeholder="輸入數值..." type="number" name="input2" id="input2" onkeyup="cal(input2,unit2,input1,unit1);">
+						<select id="unit2" name="unit2" title="kilometer" onchange="this.title=this.options[this.selectedIndex].title;cal(input1,unit1,input2,unit2);">
+						　<option value="TB" title="TB">TB</option>
+						　<option value="G" title="G">G</option>
+						　<option value="MB" title="MB">MB</option>
+						　<option value="KB" title="KB">KB</option>
+						  <option value="B" title="BYTE">B</option>
+						  <option value="bit" title="bit">bit</option>
+						</select>
+					</form>
+				</article>
+			</section>
+		</main>
+		
+		<aside>
+		</aside>
+		
+		<footer>
+		</footer>
+		
+		<script>
+			function cal(input, unit, output, unit_out)
+			{
+				var ratio = [1024,1,1024,1048576,1073741824,8589934592];
+				output.value = Math.round(1000000 * input.value * ratio[unit.selectedIndex] / ratio[unit_out.selectedIndex])/1000000;
+			}
+		</script>
+		
+	</body>
+</html>
