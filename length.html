@@ -65,7 +65,7 @@
 		<script>
 			function cal(input, unit, output, unit_out)
 			{
-				var ratio = [1000000,1000,10,1,0.001,0.000001];
+				var ratio = [100000,100,1,0.1,0.001,0.000001];
 				output.value = Math.round(1000000 * input.value * ratio[unit.selectedIndex] / ratio[unit_out.selectedIndex])/1000000;
 			}
 		</script>
