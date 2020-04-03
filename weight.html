@@ -33,8 +33,6 @@
 						<select id="unit1" name="unit1" title="kilometer" onchange="this.title=this.options[this.selectedIndex].title;cal(input1,unit1,input2,unit2);">
 					          <option value="t" title="metric ton">t</option>
 						　<option value="kg" title="kilogram">kg</option>
-						  <option value="twkg" title="TWKG">臺斤</option>
-						  <option value="twtwo" title="TWTWO">臺兩</option>
 					          <option value="g" title="gram">g</option>
 						</select>
 					</form>
@@ -44,8 +42,6 @@
 						<select id="unit2" name="unit2" title="kilometer" onchange="this.title=this.options[this.selectedIndex].title;cal(input1,unit1,input2,unit2);">
 						  <option value="t" title="metric ton">t</option>
 						　<option value="kg" title="kilogram">kg</option>
-						  <option value="twkg" title="TWKG">臺斤</option>
-						  <option value="twtwo" title="TWTWO">臺兩</option>
 						<option value="g" title="gram">g</option>
 					</form>
 				</article>
@@ -61,7 +57,7 @@
 		<script>
 			function cal(input, unit, output, unit_out)
 			{
-				var ratio = [1000000,1000,600,37.5,1];
+				var ratio = [1000000,1000,1];
 				output.value = Math.round(1000000 * input.value * ratio[unit.selectedIndex] / ratio[unit_out.selectedIndex])/1000000;
 			}
 		</script>
