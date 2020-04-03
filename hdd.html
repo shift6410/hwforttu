@@ -35,8 +35,6 @@
 						　<option value="G" title="G">G</option>
 						　<option value="MB" title="MB">MB</option>
 						　<option value="KB" title="KB">KB</option>
-						  <option value="B" title="BYTE">B</option>
-						  <option value="bit" title="bit">bit</option>
 						</select>
 					</form>
 					<p>到：</p>
@@ -47,8 +45,6 @@
 						　<option value="G" title="G">G</option>
 						　<option value="MB" title="MB">MB</option>
 						　<option value="KB" title="KB">KB</option>
-						  <option value="B" title="BYTE">B</option>
-						  <option value="bit" title="bit">bit</option>
 						</select>
 					</form>
 				</article>
@@ -64,7 +60,7 @@
 		<script>
 			function cal(input, unit, output, unit_out)
 			{
-				var ratio = [1024,1,1024,1048576,1073741824,8589934592];
+				var ratio = [1048576,1024,1,0.0009765625];
 				output.value = Math.round(1000000 * input.value * ratio[unit.selectedIndex] / ratio[unit_out.selectedIndex])/1000000;
 			}
 		</script>
