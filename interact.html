@@ -48,10 +48,10 @@
 					<p>Those text can change their color.</p>
 					<br>
 					<form>
-					  <label for="search">請輸入欲尋找文字：</label>
+					  <label for="search">若要尋找文字請輸入：</label>
 					  <input type="text" id="search" name="尋找">
 					  <button type="button" onClick="searchF(0)">尋找</button><br>
-					  <label for="replace">請輸入欲修改文字：</label>
+					  <label for="replace">若要更改文字請輸入：</label>
 					  <input type="text" id="replace" name="修改">
 					  <button type="button" onClick="searchF(1)">修改</button><br>
 					</form>
@@ -77,6 +77,19 @@
 			tag[3] = document.getElementsByTagName("a");
 			tag[4] = document.getElementsByTagName("h1");
 			tag[5] = document.getElementsByTagName("h2");
+			function clear(log)
+			{
+				var logRE = new RegExp('<span style=\\"background:r?e?d?y?e?l?l?o?w?;\\">' + log + "<\\/span>", 'g');
+				console.log(logRE);
+				for(var i = 0; i < tag.length; i++)
+				{
+					for(var j = 0; j < tag[i].length; j++)
+					{
+						var newHTML = tag[i][j].innerHTML;
+						tag[i][j].innerHTML = newHTML.replace(logRE, log);
+					}
+				}
+			}
 			function searchF(r)
 			{
 				if(replacelog) clear(replacelog);
@@ -113,19 +126,6 @@
 					}
 				}
 				replacelog = replaceText;
-			}
-			function clear(log)
-			{
-				var logRE = new RegExp('<span style=\\"background:r?e?d?y?e?l?l?o?w?;\\">' + log + "<\\/span>", 'g');
-				console.log(logRE);
-				for(var i = 0; i < tag.length; i++)
-				{
-					for(var j = 0; j < tag[i].length; j++)
-					{
-						var newHTML = tag[i][j].innerHTML;
-						tag[i][j].innerHTML = newHTML.replace(logRE, log);
-					}
-				}
 			}
 		</script>
 
