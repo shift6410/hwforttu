@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset = "UTF-8">
+		<title>PageI3B30 API</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+	
+		<header class = "banner">
+			<h1>Google Maps API</h1>
+
+		</header>
+
+		
+		<main>
+			<section>
+				<h2>查詢選項</h2>
+				<article>
+					<p>捷運站</p>
+					<select id = "markplace" onchange="mark(this.value);">
+						//brown
+						<option value = "動物園站">動物園</option>
+						<option value = "木柵站">木柵</option>
+						<option value = "萬芳社區站">萬芳社區</option>
+						<option value = "萬芳醫院站">萬芳醫院</option>
+						<option value = "辛亥站">辛亥</option>
+						<option value = "麟光站">麟光</option>
+						<option value = "六張犁站">六張犁</option>
+						<option value = "科技大樓站">科技大樓</option>
+						<option value = "大安站">大安</option>
+						<option value = "忠孝復興站">忠孝復興</option>
+						<option value = "南京復興站">南京復興</option>
+						<option value = "中山國中站">中山國中</option>
+						<option value = "松山機場站">松山機場</option>
+						<option value = "大直站">大直</option>
+						<option value = "劍南路站">劍南路</option>
+						<option value = "西湖站">西湖</option>
+						<option value = "港墘站">港墘</option>
+						<option value = "文德站">文德</option>
+						<option value = "內湖站">內湖</option>
+						<option value = "大湖公園站">大湖公園</option>
+						<option value = "葫洲站">葫洲</option>
+						<option value = "東湖站">東湖</option>
+						<option value = "南港軟體園區站">南港軟體園區</option>
+						<option value = "南港展覽館站">南港展覽館</option>
+						
+						//red
+						<option value = "淡水站">淡水</option>
+						<option value = "紅樹林站">紅樹林</option>
+						<option value = "竹圍站">竹圍</option>
+						<option value = "關渡站">關渡</option>
+						<option value = "忠義站">忠義</option>
+						<option value = "復興崗站">復興崗</option>
+						<option value = "北投站">北投</option>
+						<option value = "奇岩站">奇岩</option>
+						<option value = "唭哩岸站">唭哩岸</option>
+						<option value = "石牌站">石牌</option>
+						<option value = "明德站">明德</option>
+						<option value = "芝山站">芝山</option>
+						<option value = "士林站">士林</option>
+						<option value = "劍潭站">劍潭</option>
+						<option value = "圓山站">圓山</option>
+						<option value = "民權西路站">民權西路</option>
+						<option value = "雙連站">雙連</option>
+						<option value = "中山站">中山</option>
+						<option value = "台北車站">台北車站</option>
+						<option value = "台大醫院站">台大醫院</option>
+						<option value = "中正紀念堂站">中正紀念堂</option>
+						<option value = "東門站">東門</option>
+						<option value = "大安森林公園站">大安森林公園</option>
+						<option value = "大安站">大安</option>
+						<option value = "信義安和站">信義安和</option>
+						<option value = "台北101/世貿站">台北101/世貿</option>
+						<option value = "象山站">象山</option>
+						//green
+						<option value = "新店站">新店</option>
+						<option value = "新店區公所站">新店區公所</option>
+						<option value = "七張站">七張</option>
+						<option value = "小碧潭站">小碧潭</option>
+						<option value = "大坪林站">大坪林</option>
+						<option value = "景美站">景美</option>
+						<option value = "萬隆站">萬隆</option>
+						<option value = "公館站">公館</option>
+						<option value = "台電大樓站">台電大樓</option>
+						<option value = "古亭站">古亭</option>
+						<option value = "中正紀念堂站">中正紀念堂</option>
+						<option value = "小南門站">小南門</option>
+						<option value = "西門站">西門</option>
+						<option value = "北門站">北門</option>
+						<option value = "中山站">中山</option>
+						<option value = "松江南京站">松江南京</option>
+						<option value = "南京復興站">南京復興</option>
+						<option value = "台北小巨蛋站">台北小巨蛋</option>
+						<option value = "南京三民站">南京三民</option>
+						<option value = "松山站">松山</option>
+						//ORANGE
+						<option value = "南勢角站">南勢角</option>
+						<option value = "景安站">景安</option>
+						<option value = "永安市場站">永安市場</option>
+						<option value = "頂溪站">頂溪</option>
+						<option value = "古亭站">古亭</option>
+						<option value = "東門站">東門</option>
+						<option value = "忠孝新生站">忠孝新生</option>
+						<option value = "松江南京站">松江南京</option>
+						<option value = "行天宮站">行天宮</option>
+						<option value = "中山國小站">中山國小</option>
+						<option value = "民權西路站">民權西路</option>
+						<option value = "大橋頭站">大橋頭</option>
+						<option value = "台北橋站">台北橋</option>
+						<option value = "菜寮站">菜寮</option>
+						<option value = "三重站">三重</option>
+						<option value = "先嗇宮站">先嗇宮</option>
+						<option value = "頭前庄站">頭前庄</option>
+						<option value = "新莊站">新莊</option>
+						<option value = "輔大站">輔大</option>
+						<option value = "丹鳳站">丹鳳</option>
+						<option value = "迴龍站">迴龍</option>
+						<option value = "三重國小站">三重國小</option>
+						<option value = "三和國中站">三和國中</option>
+						<option value = "徐匯中學站">徐匯中學</option>
+						<option value = "三民高中站">三民高中</option>
+						<option value = "蘆洲站">蘆洲</option>
+						//blue
+						<option value = "頂埔站">頂埔</option>
+						<option value = "永寧站">永寧</option>
+						<option value = "土城站">土城</option>
+						<option value = "海山站">海山</option>
+						<option value = "亞東醫院站">亞東醫院</option>
+						<option value = "府中站">府中</option>
+						<option value = "板橋站">板橋</option>
+						<option value = "新埔站">新埔</option>
+						<option value = "江子翠站">江子翠</option>
+						<option value = "龍山寺站">龍山寺</option>
+						<option value = "西門站">西門</option>
+						<option value = "台北車站">台北車站</option>
+						<option value = "善導寺站">善導寺</option>
+						<option value = "忠孝新生站">忠孝新生</option>
+						<option value = "忠孝復興站">忠孝復興</option>
+						<option value = "忠孝敦化站">忠孝敦化</option>
+						<option value = "國父紀念館站">國父紀念館</option>
+						<option value = "市政府站">市政府</option>
+						<option value = "永春站">永春</option>
+						<option value = "後山埤站">後山埤</option>
+						<option value = "昆陽站">昆陽</option>
+						<option value = "南港站">南港</option>
+						<option value = "南港展覽館站">南港展覽館</option>
+					</select>
+				</article>
+			</section>
+		</main>
+		
+		<aside>
+			<iframe 
+				id = "map"
+				width="600" 
+				height="450" 
+				frameborder="0" 
+				style="border:0" 
+				src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBm69bhn_PUE2iS-sCgbvSGOVlrZ53d4w8&q=台北車站"
+				allowfullscreen>
+			</iframe>
+		</aside>
+		
+		<footer>
+			<p>參考網站：<a href = "https://www.oxxostudio.tw/articles/201707/google-maps-1.html" target="_blank;" style="color: white;">OxxoStudio</a></p>
+		</footer>
+		
+		<script>
+			function mark(place){
+				document.getElementById("map").src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyBm69bhn_PUE2iS-sCgbvSGOVlrZ53d4w8&q=" + place;
+			}
+		</script>
+		
+	</body>
+</html>
