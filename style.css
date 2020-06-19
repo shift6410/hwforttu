@@ -57,14 +57,14 @@ article {
 }
 
 main {
-  width: 640px;
+  width: 120px;
   float: left;
   margin-bottom: 10px;
 }
 
 aside {
   background-color: #bbbbbb;
-  width: 270px;
+  width: 600px;
   float: right;
   padding: 20px;
   margin-top: 10px;
